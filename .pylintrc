@@ -1,0 +1,2 @@
+# helps pylint find local python files being imported
+init-hook='import sys; sys.path.append(".")'

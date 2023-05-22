@@ -1,0 +1,6 @@
+.env
+db.json
+
+# python
+__pycache__
+.venv
