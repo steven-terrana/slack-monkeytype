@@ -158,7 +158,7 @@ async def refresh_bests():
         bests.overwrite(data)
         toc = time.perf_counter()
         logger.info(
-            "refreshed personal bests for %s users in %f seconds", len(u), toc - tic
+            "refreshed personal bests for %s users in %f seconds, will refresh again in 60 seconds", len(u), toc - tic
         )
         await asyncio.sleep(60)
 
