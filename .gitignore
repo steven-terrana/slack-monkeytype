@@ -4,3 +4,5 @@ db.json
 # python
 __pycache__
 .venv
+
+.data

@@ -1,0 +1,18 @@
+services:
+  dynamo:
+    image: "amazon/dynamodb-local:latest"
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".data:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ".env:/app/.env"
+    links:
+      - dynamo
